@@ -1,0 +1,69 @@
+1.Jesse and cookies
+int n=0;
+    int i=0;
+    int l,m,s;
+    int y=A.size();
+    Collections.sort(A);
+    while(A.size()>1 && i<y){
+        if(A.get(0)<k){
+            l=Collections.min(A);
+            A.remove(Collections.min(A));
+            m=Collections.min(A);
+            A.remove(Collections.min(A));
+            s=(1*l)+(2*m);
+            A.add(s);
+            n=n+1;
+            Collections.sort(A);
+            
+        }
+        i++;    
+    }
+    if(A.get(0)<k && y>A.size()){
+        return -1;
+    }
+    return (n);
+
+
+2.Symmetric tree (leetcode)
+    TreeNode ptr1=root.left;
+        TreeNode ptr2=root.right;
+        ArrayList<Integer> l1=new ArrayList<>();
+        ArrayList<Integer> l2=new ArrayList<>();
+        inorder(ptr1,l1);
+        inorder(ptr2,l2);
+        Collections.reverse(l2);
+        if(l1.equals(l2)){
+            return true;
+        }
+        else{
+            return false;
+        }
+
+ ArrayList<Character> arr=new ArrayList<>();
+        int j=0;
+        while(j<s.length()){
+            arr.add(s.charAt(j));
+            j++;
+            }
+        int i=0;
+        int k=0;
+        int c=0;
+        while(i<arr.size()){
+            while(k<arr.size()&& k!=i){
+                if(arr.get(i)==arr.get(k)){
+                    c++;
+                    arr.remove(k);
+                }
+                k++;    
+            }
+            i++;
+            
+        }
+        if(c>=2){
+            return "NO";
+        }
+        return "YES";
+        
+
+
+ 
